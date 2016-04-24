@@ -38,7 +38,7 @@ angular.module('myApp.home', [])
           var qs = $httpParamSerializer(params);
 
           HomeService.get(params, function(response){
-              console.log('response from node API', )
+              //console.log('response from node API', )
           })
       }
 
