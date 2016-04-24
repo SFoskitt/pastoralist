@@ -1,5 +1,5 @@
-client/bower_components
+client/bower_components/
 npm-debug.log
 node_modules
-server/utils
 .idea
+server/utils.js
