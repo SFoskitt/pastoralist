@@ -39,7 +39,7 @@ angular.module('myApp.home', [])
 
           HomeService.get(params, function(response){
               //console.log('response from node API', )
-          })
+          });
       }
 
       function showEntry (){
@@ -48,7 +48,37 @@ angular.module('myApp.home', [])
 
   })
 
-    .factory('HomeService', function HomeService(){
+    .factory('HomeService', function HomeService(params){
         // do put request to node API for ??
         //
+
+
+        var get = function (params) {
+            return $http({
+                method: 'GET',
+                url: '/api/alert',
+            });
+        }
+
+        //router.get('/alert', function(req, res){
+        //    var location = {
+        //        lat: 92,
+        //        lon: 124
+        //    }
+        //
+        //    db.getAlerts(location, function(data){
+        //        res.send(data);
+        //    });
+        //})
+        //
+        //router.post('/alert', function(req, res){
+        //    var alert = {
+        //        lat: 92,
+        //        lon: 124,
+        //        alert: "Oh n/m, all good."
+        //    }
+        //
+        //    db.postAlert(alert);
+        //    res.sendStatus(200);
+        //})
     });
