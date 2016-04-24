@@ -9,4 +9,5 @@ angular.module('myApp.alerts', [])
   })
 
   .controller('alerts', function() {
+      //
   });
