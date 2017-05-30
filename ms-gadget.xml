@@ -5,33 +5,31 @@
     directory_title="MicroStrategy"
     width="825"    
     height="510"   
-    author="John"
+    author="SAF"
     description ="MicroStrategy BI Demo"
-    author_email="john.smith@google.com"
+    author_email="sfoskitt@bizrate.com"
     screenshot="http://www.microstrategy.com//graphics/Headers/MSTRLogo.gif"
     thumbnail="http://www.microstrategy.com//graphics/Headers/MSTRLogo.gif"
     scrolling="true"
     />
   <UserPref name="username" display_name="User Name" default_value="user"/>
   <UserPref name="password" display_name="Password" default_value=""/>
-  <UserPref name="server" display_name="Intelligence Server" default_value="was-jsmith"/>
-  <UserPref name="iport" display_name="IServer Port" default_value="0"/>
-  <UserPref name="webserver" display_name="Web Server" default_value="jsmith.corp.microstrategy.com"/>
-  <UserPref name="port" display_name="Web Server Port" default_value="8080"/>
+  <UserPref name="server" display_name="MS @ Bizrate" default_value="MICROSTRATEGY-IS.BIZRATEINSIGHTS.COM"/>
+<!--   <UserPref name="iport" display_name="IServer Port" default_value="0"/> -->
+  <UserPref name="webserver" display_name="Web Server" default_value="MICROSTRATEGY-IS.BIZRATEINSIGHTS.COM"/>
+  <UserPref name="port" display_name="Web Server Port" default_value="34952"/>
   <UserPref name="evt" display_name="MicroStrategy Report URL"
-            default_value="4001&amp;mstrWeb.reportNoHeaderNoFooterNoPath.4001"/>
-  <UserPref name="project" display_name="Project" default_value="MicroStrategy Tutorial"/>
-  <UserPref name="reportID" display_name="Report Name" default_value="34E0F8614BBF0C829C297D89704B76B6"
+            default_value="3186&amp;mstrWeb.reportNoHeaderNoFooterNoPath.3186"/>
+  <UserPref name="project" display_name="Project" default_value="INSIGHTS_PROD"/>
+  <UserPref name="subscriptionID" display_name="Subscription Name" default_value="9C5BD4094D3EA30C994645BA883952F7"
             datatype="enum">
-    <EnumValue value="34E0F8614BBF0C829C297D89704B76B6" display_value="Category Report"/>
-    <EnumValue value="2C9B10AF4AD515081BA4FC88C5132718" display_value="Profit Forecast, West"/>
-    <EnumValue value="271209CD11D3EA25C000B3B2D86C964F" display_value="SDK Sample Report"/>
-    <EnumValue value="5E9FC128485372449709C7AB8DF91ACE" display_value="Revenue Forecast, East"/>
-    <EnumValue value="433CD21B4AD6168A2C952E985039CEE9" display_value="Units Sold, Revenue by Category"/>
   </UserPref>
   <Content type="html">
     <![CDATA[      
-      <div id="content_div"/>            
+      <div id="content_div"/>
+            <div>
+
+            </div>
       <script type="text/javascript">
         var iframeStr = "<IFRAME SRC=\"http://";
         var prefs = new _IG_Prefs();
@@ -45,10 +43,9 @@
         var servlet = prefs.getString("servlet");
         var evt = prefs.getString("evt");
         var project = prefs.getString("project");    
-        iframeStr = iframeStr + webserver + ":" + port + "/MicroStrategy/servlet/mstrWeb?evt=" + evt +
-  "&server=" + server + "&project=" + project + "&reportID=" + reportID + "&uid=" + username +
-  "&pwd=" + password + "&port=" + iport + "\"" + " WIDTH='800' HEIGHT='500' SCROLLING='yes'
-  BORDER='0' />";
+
+        iframeStr = '<iframe frameborder="0" allowfullscreen src="http://microstrategy-ws.bizrateinsights.com/MicroStrategy/asp/Main.aspx?evt=3186&src=Main.aspx.3186&subscriptionID=C9CAD05144D738B4C669CC83449A6DA7&Server=MICROSTRATEGY-IS.BIZRATEINSIGHTS.COM&Project=INSIGHTS_PROD&Port=34952&share=0&hiddensections=header,path,dockLeft,dockRight,dockBottom,dockTop,footer" />'
+
         _gel('content_div').innerHTML = iframeStr;         
       </script>
     ]]>
