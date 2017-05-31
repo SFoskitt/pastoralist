@@ -44,7 +44,7 @@
         var evt = prefs.getString("evt");
         var project = prefs.getString("project");    
 
-        iframeStr = '<iframe frameborder="0" allowfullscreen src="http://microstrategy-ws.bizrateinsights.com/MicroStrategy/asp/Main.aspx?evt=3186&src=Main.aspx.3186&subscriptionID=C9CAD05144D738B4C669CC83449A6DA7&Server=MICROSTRATEGY-IS.BIZRATEINSIGHTS.COM&Project=INSIGHTS_PROD&Port=34952&share=0&hiddensections=header,path,dockLeft,dockRight,dockBottom,dockTop,footer" />'
+        iframeStr = '<iframe width=825 height=510 src="http://10.74.193.118/MicroStrategy/asp/Main.aspx?evt=2048026&src=Main.aspx.2048026&subscriptionID=D6BB60854F50D4EC6FDFB482F47DBA1C&Server=MICROSTRATEGY-IS.BIZRATEINSIGHTS.COM&Project=INSIGHTS_PROD&Port=34952&share=1&hiddensections=header,path,dockTop,dockLeft,footer" />'
 
         _gel('content_div').innerHTML = iframeStr;         
       </script>
